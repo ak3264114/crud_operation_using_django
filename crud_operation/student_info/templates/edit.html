@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Edit Operation</title>
+  </head>
+  <body>
+    <div id="add_student">
+        <form  action="/update/{{student_data.id}}" method="post" style="margin-left: 15px;">
+          {% csrf_token %}
+            <label>Name</label><br>
+            <input type="text"  id="name" name="name" value="{{student_data.name}}"><br>
+            <label>Email</label><br>
+            <input type="email"  id="email" name="email"  value="{{student_data.email}}"><br>
+            <label>Class</label><br>
+            <input type="text"  id="std" name="std"  value="{{student_data.std}}"><br>
+            <label>Section</label><br>
+            <input type="text" id="sec" name="sec"  value="{{student_data.sec}}"><br>
+            <br>
+            <button type="submit" class="btn btn-primary" value="Employee">update</button>
+        </form>
+      </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
+

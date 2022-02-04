@@ -12,7 +12,7 @@ def add(request):
     if request.method =='POST':
         name = request.POST['name']
         email = request.POST['email']
-        std = request.POST['sec']
+        std = request.POST['std']
         sec = request.POST['sec']
         Student(name=name , email=email , std=std , sec=sec ,).save()
         return HttpResponse('added Succesfully <br/> <br/> <br/> <a href="/" style="border: 3px solid #00dcff; padding: 3px 10px;background-color: #91ff00ba;border-radius: 10px;" role="button" role="button">Go Back</a>')
@@ -25,7 +25,7 @@ def remove(request,stu_id):
     if stu_id :
         try:        
            Student.objects.get(id=stu_id).delete()
-           return HttpResponse('Removed Succesfully <br/> <br/> <br/> style="border: 3px solid #00dcff; padding: 3px 10px;background-color: #91ff00ba;border-radius: 10px;" role="button" <a href="/" role="button">Go Back</a>')
+           return HttpResponse('Removed Succesfully <br/> <br/> <br/> <a  href="/" role="button" style="border: 3px solid #00dcff; padding: 3px 10px;background-color: #91ff00ba;border-radius: 10px;" role="button" >Go Back</a>')
         except:
             Student.objects.get(id=stu_id).delete()
             return render(request,'index.html')
